@@ -3,4 +3,4 @@
 $dbsevername = "localhost";
 $dbusername = "root";
 $dbpassword = "";
-$dbname = "kingchat";
+$dbname = "mikechat";
