@@ -15,6 +15,41 @@ function account_exits() {
 		</script>");
 }
 
+function sanitizeString($var) {    
+	if (get_magic_quotes_gpc())
+
+		$var = stripsloashes($var);   
+	$var = htmlentities($var);    
+	$var = strip_tags($var); 
+
+	if (strlen($var) > 400 ) {
+		echo"Charachter break";
+		die("fatal error"); 
+	}
+	$var = addslashes($var);
+	return $var; 
+}
+
+function message_information_missing() {
+	echo("<script type=\"text/javascript\">
+		alert(\"Information missing\");
+		</script>");
+}
+
+function check_if_empty($var) {
+	if (empty($var)) {
+		message_information_missing();
+		redirect_back();
+		die();
+	}
+}
+
+function critical_check($var){
+	if (!isset($_POST[$var])) {
+		die("$var not found");
+	}
+}
+
 function create_account($varconn,$table,$email,$email_info,$name,$name_info,$security_key,$security_key_info) {
 
 	setcookie("email","$email_info",time()+31556926 ,'/');
