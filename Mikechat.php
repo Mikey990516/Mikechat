@@ -4,7 +4,7 @@
 	<title>Mikechat</title>
 </head>
 <body>
-	<h1> Chat </h1>
+	<h1> MikeChat </h1>
 	<p>You must accept at your emails</p>
 </body>
 </html>
