@@ -17,7 +17,7 @@
 		<input type="text" name="username" placeholder="username">
 		<input type="text" name="emial" placeholder="email">
 		<input type="password" name="password" placeholder="Password">
-		<input type="submit" value="Create account"/>
+		<input type="submit" value="Create account">
 	</form>
 </body>
 </html>
